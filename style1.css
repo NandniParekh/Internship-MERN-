@@ -1,0 +1,44 @@
+body {
+  margin: 0;
+  font-family: 'Georgia', serif;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 30px;
+  border-top: 5px solid #3b3b3b;
+  background-color: white;
+}
+
+.logo {
+  font-size: 28px;
+  font-weight: bold;
+  text-shadow: 2px 2px 5px rgba(0,0,0,0.3);
+}
+
+.icons {
+  display: flex;
+  align-items: center;
+  gap: 25px;
+  font-size: 20px;
+  color: black;
+  position: relative;
+}
+
+.cart-wrapper {
+  position: relative;
+}
+
+.badge {
+  position: absolute;
+  top: -8px;
+  right: -10px;
+  background-color: #c23b56;
+  color: white;
+  font-size: 10px;
+  padding: 2px 6px;
+  border-radius: 50%;
+  font-weight: bold;
+}

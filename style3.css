@@ -1,0 +1,68 @@
+   body {
+      margin: 0;
+      font-family: 'Roboto', sans-serif;
+    }
+
+    .navbar {
+      background-color: white;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 15px 40px;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    }
+
+
+    .logo {
+      font-size: 24px;
+      font-weight: bold;
+    }
+
+    .logo span {
+      background-color: orange;
+      color: black;
+      padding: 5px 10px;
+      border-radius: 50px;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 30px;
+      align-items: center;
+    }
+
+    .nav-links a {
+      text-decoration: none;
+      color: black;
+      display: flex;
+      align-items: center;
+      gap: 5px;
+      transition: 0.3s ease;
+      font-size: 16px;
+      font-weight: 500;
+    }
+
+    .nav-links a:hover {
+      color: orange;
+      transform: scale(1.05);
+    }
+    .book-cab {
+      background-color: rgb(240, 175, 175);
+      color: rgb(226, 226, 226);
+      padding: 10px 20px;
+      border-radius: 30px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-weight: 500;
+      transition: 0.3s ease;
+    }
+
+    .book-cab:hover {
+      background-color: rgb(0, 0, 0);
+      color: rgb(255, 179, 179);
+    }
+
+    .icon {
+      font-style: normal;
+    }
