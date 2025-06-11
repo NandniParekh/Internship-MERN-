@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Biodata Form</title>
+  <style>
+    #displayData {
+      margin-top: 20px;
+      border: 1px solid #ccc;
+      padding: 10px;
+      width: 300px;
+    }
+    img {
+      width: 150px;
+      height: 150px;
+      margin-top: 10px;
+      object-fit: cover;
+      border: 2px solid black;
+    }
+  </style>
+</head>
+<body>
+<h2>Enter Your Biodata</h2>
+<form id="biodataForm">
+  Name: <input type="text" id="name"><br><br>
+  Address: <input type="text" id="address"><br><br>
+  Pincode: <input type="text" id="pincode"><br><br>
+  State: <input type="text" id="state"><br><br>
+  City: <input type="text" id="city"><br><br>
+  Age: <input type="number" id="age"><br><br>
+  Date of Birth: <input type="date" id="dob"><br><br>
+  <button type="button" onclick="showData()">Submit</button>
+</form>
+<div id="displayData">
+  <h3>Biodata Preview:</h3>
+  <p id="showName">Name: </p>
+  <p id="showAddress">Address: </p>
+  <p id="showPincode">Pincode: </p>
+  <p id="showState">State: </p>
+  <p id="showCity">City: </p>
+  <p id="showAge">Age: </p>
+  <p id="showDOB">DOB: </p>
+  <img id="profileImage" src="Image.png" alt="Profile Image">
+</div>
+<script>
+    function showData() {
+  let name = document.getElementById("name").value;
+  let address = document.getElementById("address").value;
+  let pincode = document.getElementById("pincode").value;
+  let state = document.getElementById("state").value;
+  let city = document.getElementById("city").value;
+  let age = document.getElementById("age").value;
+  let dob = document.getElementById("dob").value;
+  document.getElementById("showName").textContent = "Name: " + name;
+  document.getElementById("showAddress").textContent = "Address: " + address;
+  document.getElementById("showPincode").textContent = "Pincode: " + pincode;
+  document.getElementById("showState").textContent = "State: " + state;
+  document.getElementById("showCity").textContent = "City: " + city;
+  document.getElementById("showAge").textContent = "Age: " + age;
+  document.getElementById("showDOB").textContent = "DOB: " + dob;
+  document.getElementById("profileImage").src = "Logo.png";
+}
+</script>
+</body>
+</html>
