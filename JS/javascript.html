@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>js</title>
+</head>
+<body>
+    <h2>Question 1</h2>
+    <p id="demo">
+        Enter name: <input type="text" name="name" id="name">
+        <button onclick="greet()">Greet Me</button>
+    <p id="message"></p>
+    <h2>Question 2</h2>
+        <p id="d">
+            enter a number: <input type="number" name="num" id="num">
+            <button onclick="isEven()">Check whether the number is odd or even!</button>
+        </p>
+        <p id="result"></p>
+        <p id="r1"></p>
+        <h2>Question 3</h2>
+        <button onclick="squareNum()">Square</button>
+        <p id="square"></p>
+        <h2>Question 4</h2>
+        <p id="re"></p>
+        <h2>Question 5</h2>
+        <p id="city">
+            age: <input type="number" name="age" id="age"><br>
+            <input type="checkbox" id="citizen">
+            <label for="citizen">I am a citizen</label><br><br>
+            <button onclick="checkE(age,citizen)">Check</button>
+        </p>
+        <p id="cmp"></p>
+  <script>
+    function greet() {
+  let user = document.getElementById("name").value;
+  let message = user ? `Hello, ${user}! Have a nice day` : "Hello guest!";
+  document.getElementById("message").innerHTML = message;
+    }
+    //question 2
+    function isEven()
+    {
+        let num=document.getElementById("num").value;
+       if(num%2==0){
+        document.getElementById("result").innerHTML = "True";
+       }
+       else{
+        document.getElementById("result").innerHTML= "False";
+       }
+       for (let i = 1; i <= 20; i++) {
+        if(i%2==0){
+            document.getElementById("r1").innerHTML += (i + " is Even<br>");
+        } else {
+            document.getElementById("r1").innerHTML += (i + " is Odd<br>");
+            }
+        }
+    }
+    //question 3
+    let ar=[2,3,4];
+    const squareNum = () => {
+        let result = ar.map(num => num * num);
+        document.getElementById("square").innerHTML = result.join(", ");
+    };
+    //question 4
+    let balance=1000;
+    let deposite=500;
+    let bill=300;
+    let interest=0.05*balance;
+    let amount=(balance+deposite-bill+interest);
+    document.getElementById("re").innerHTML=amount;
+    //question 5
+      function canVote(age, isCitizen) {
+      return age >= 18 && isCitizen === true;
+    }
+    function checkE() {
+      const age = parseInt(document.getElementById("age").value);
+      const isCitizen = document.getElementById("citizen").checked;
+      const result = canVote(age, isCitizen) ? "You are eligible to vote.": "You are not eligible to vote.";
+      document.getElementById("cmp").innerHTML = result;
+    }
+</script>
+</body>
+</html>

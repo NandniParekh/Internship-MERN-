@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>without Object</h2>
+    <p id="demo"></p>
+    <h2>Object</h2>
+    <p id="d1"></p>
+    <p id="d3">
+        <button type="button" onclick="document.getElementById('d3').innerHTML=Date()">Click here</button>
+    </p>
+  
+        <h2 onmouseout="small()" id="d2">small function call</h2>
+        <h2 onmouseover="big()" id="d4">Big function call</h2>
+        <h2>Double click</h2>
+        <button ondblclick="change()">double click here</button>
+        <p id="d5"></p>
+    <script>
+        let name="abc";
+        let age="10";
+        document.getElementById('demo').innerHTML=name+age;
+        const car={name:"pqr",type:"abc123",price:"100000"};
+        document.getElementById('d1').innerHTML="car name is "+car.name;
+        function small()
+        {
+            document.getElementById('d2').innerHTML="small";
+        }
+        function big()
+        {
+            document.getElementById('d4').innerHTML="big";
+        }
+        function change()
+        {
+            document.getElementById('d5').innerHTML="Hello";
+        }
+    </script>
+</body>
+</html>
+

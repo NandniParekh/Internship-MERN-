@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scroll event</title>
+        <style>
+        body{
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            margin: 0;
+        }
+        #scroll {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        padding: 10px 0;
+        background-color: transparent;
+        transition: background-color 0.3s ease;
+        z-index: 1000;
+         }
+        #ab {
+        height: 4000px; 
+         }
+    </style>
+</head>
+<body>
+    <h2 id="scroll">Change color</h2>
+    <h2 id="ab"></h2>
+    <script>
+     window.addEventListener("scroll", show)
+     function show() {
+        const header = document.getElementById('scroll');
+        if (window.scrollY > 200) {
+             header.style.backgroundColor = "blue"; 
+        } 
+        else{
+            header.style.backgroundColor = "lightgray"; 
+        }
+    };
+</script>
+</body>
+</html>
