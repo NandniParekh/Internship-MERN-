@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task 3</title>
+</head>
+<body>
+    <h2>Question 1</h2>
+    <button onclick="ms()">Transform String</button>
+    <div id="op"></div>
+    <br><br>
+    <h2>Question 2</h2>
+    <input type="text" id="text" placeholder="Enter text here..." />
+    <button onclick="cv()">Count Vowels</button>
+    <div id="r1"></div>
+    <br><br>
+    <h2>Question 3</h2>
+    <input type="text" id="t1" placeholder="Enter username" />
+    <button onclick="vu()">Validate</button>
+    <div id="r2"></div>
+    <br><br>
+    <h2>Question 4</h2>
+    <input type="text" id="ti" placeholder="Enter text" />
+    <button onclick="rs()">Reverse</button>
+    <div id="o1"></div>
+
+  <script>
+    //Question 1
+     function ms() {
+      let str = " JavaScript is Awesome! ";
+      str = str.trim();                  
+      str = str.toLowerCase();           
+      str = str.replace("awesome", "powerful"); 
+      document.getElementById("op").innerHTML = str;
+    }
+    //Question 2
+    function cv() {
+      let str = document.getElementById("text").value;
+      let count = 0;
+      const vowels = "aeiouAEIOU";
+      for (let i = 0; i < str.length; i++) {
+        if (vowels.includes(str[i])) {
+          count++;
+        }
+      }
+      document.getElementById("r1").innerHTML = "Number of vowels: " + count;
+    }
+    //Question 3
+    function vu() {
+      const username = document.getElementById("t1").value;
+      const re= /^[a-zA-Z0-9_]+$/;
+      if (re.test(username)) {
+        document.getElementById("r2").innerHTML = "Valid username";
+        document.getElementById("r2").style.color = "green";
+      } else {
+        document.getElementById("r2").innerHTML = "Invalid username";
+        document.getElementById("r2").style.color = "red";
+      }
+    }
+    //Question 4
+    function rs() {
+      const input = document.getElementById("ti").value;
+      let reversed = "";
+      for (let i = input.length - 1; i >= 0; i--) {
+        reversed += input[i];
+      }
+      document.getElementById("o1").innerHTML = "Reversed: " + reversed;
+    }
+  </script>
+</body>
+</html>

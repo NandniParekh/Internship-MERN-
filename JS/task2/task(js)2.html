@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task 2</title>
+    <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      margin-top: 50px;
+    }
+
+    button {
+      padding: 10px 20px;
+      margin: 10px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+
+    .red-btn {
+      background-color: red;
+      color: white;
+    }
+
+    .green-btn {
+      background-color: green;
+      color: white;
+    }
+
+    .blue-btn {
+      background-color: blue;
+      color: white;
+    }
+  </style>
+</head>
+<body>
+    <h2>Question 1</h2>
+    <button onclick="showAlert()">Click Me</button>
+    <br><br>
+    <h2>Question 2</h2> 
+    <input type="text" id="li" placeholder="Type something..." />
+    <div id="op"></div>
+    <br><br>
+    <h2>Question 3</h2>
+    <button onclick="inc()">Click Me</button>
+    <div id="count">Count: 0</div>
+    <br><br>
+    <h2>Question 4</h2>
+    <button class="red-btn" onclick="changeBackground('red')">Red</button>
+    <button class="green-btn" onclick="changeBackground('green')">Green</button>
+    <button class="blue-btn" onclick="changeBackground('blue')">Blue</button>
+    <br><br>
+  <script>
+    //Question 1
+    function showAlert() {
+      alert("You clicked the button!");
+    }
+    //Question 2
+    const ipf = document.getElementById("li");
+    const opd = document.getElementById("op");
+    ipf.addEventListener("input", function () {
+      opd.textContent = ipf.value;
+    });
+    //Question 3
+    let count = 0;
+    function inc() {
+      count++;
+      document.getElementById("count").innerHTML= "Count: " + count;
+    }
+    //Question 4
+    function changeBackground(color) {
+      document.body.style.backgroundColor = color;
+    }
+  </script>
+</body>
+</html>
