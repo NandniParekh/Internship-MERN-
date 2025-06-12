@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task</title>
+</head>
+<body>
+    <!-- Question 1 -->
+    <h2>Student Average Marks</h2>
+    <p id="marks"></p>
+    <!-- Question 2 -->
+    <h2>Car Information</h2>
+    <p id="car"></p>
+    <!-- Question 3 -->
+    <h2>Library Status</h2>
+    <div id="library"></div>
+    <script>
+        //question 1
+        const student={ name:"happy", age:"20", marks:[80,90,87,85,95],
+        getAverage:function()
+        {
+            let sum=0;
+            for(let i=0;i<this.marks.length;i++)
+            {
+                sum+=this.marks[i];
+            }
+            return (sum/this.marks.length);
+        }
+        };
+        const average=student.getAverage();
+        document.getElementById('marks').innerHTML=`Student ${student.name} hase an average marks of: ${average}`;
+        console.log("Average Marks:", student.getAverage());
+        //Question 2
+        let car={
+            brand: "Toyota",
+            model: "Fortuner",
+            fuel: "Diesel"
+        };
+        function printCarDetails(obj){
+            return `Brand: ${obj.brand}, Model: ${obj.model}, Furl: ${obj.fuel}`;
+        }
+        document.getElementById('car').innerHTML=printCarDetails(car);
+        // Question 3
+        const library={
+            books:[
+                    { title: "The art of being alon", author: "Renuka Gavrani", read: true },
+                    { title: "The Guide", author: "R.K.Narayan", read: false },
+                    { title: "Ikigai", author: "Héctor García", read: true },
+                    { title: "The art of letting go", author: "Rania Naim", read: false }
+            ]
+        }
+        let op="";
+        for(let i=0;i<library.books.length;i++){
+            let book = library.books[i];
+            if(book.read){
+                op+=`You have read "${book.title}" by "${book.author}".<br>`;
+            }else{
+                op+=`You have not read "${book.title}" by "${book.author}".<br>`;
+            }
+        }
+        document.getElementById('library').innerHTML=op;
+    </script>
+</body>
+</html>
