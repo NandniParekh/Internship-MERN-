@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS</title>
+</head>
+<body>
+    <h2>Question 1 </h2>
+    <p>Sum of x+5=</p>
+    <p id="d1"></p>
+    <br><br>
+    <h2>Question 2</h2>
+    <p>Square of 4 is: </p>
+    <p id="d2"></p>
+    <br><br>
+    <h2>Question 3</h2>
+    <p id="d3"></p>
+    <br><br>
+    <h2>Question 4</h2>
+    <p>Check consol</p>
+    <br><br>
+    <h2>Question 5</h2>
+    Enter string: <input type="text" name="st" id="st">
+    <button onclick="convert()">convert</button>
+    <p id="d4"></p>
+    <p id="d5"></p>
+    <br><br>
+    <h2>Question 6</h2>
+    <p>Check consol for o/p</p>
+    <br><br>
+    <h2>Question 7</h2>
+    Enter number: <input type="number" name="num" id="num">
+    <button onclick="checkEvenOdd()">Check</button>
+    <p id="d6"></p>
+    <br><br>
+    <h2>Question 8</h2>
+    <p id="d7"></p>
+    <br><br>
+    <h2>Question 9</h2>
+    enter anything: <input type="text" name="in" id="in">
+    <button onclick="parseValue()">Parse</button>
+    <p id="d8"></p>
+    <br><br>
+    <h2>Question 10</h2>
+    <p id="d9">Old Text</p>
+    <button onclick="changeText()">Change Text</button>
+    <br><br>
+    <h2>Question 11</h2>
+    <button onclick="changeBg()">Change Background</button>
+    <h2>Question 12</h2>
+    <p id="d10"></p>
+</body>
+<script>
+    // Question 1
+    var x=10;
+    var y= x+5;
+    document.getElementById('d1').innerHTML=y;
+    //Question 2
+   function calculateSquare(num) {
+      return num * num;
+    }
+    document.getElementById('d2').innerHTML=calculateSquare(4);
+    // Question 3
+    let fruits = ["Apple", "Banana", "Mango"];
+    fruits.push("Orange");
+    fruits.unshift("Pineapple");
+    document.getElementById('d3').innerHTML=fruits;
+    // Question 4
+    for(let i=1;i<=10;i++)
+    {
+        console.log(i);
+    }
+    // Question 5
+    function convert()
+    {
+        let s=document.getElementById('st').value;   
+        document.getElementById('d4').innerHTML="Upper case od string: "+s.toUpperCase();   
+        document.getElementById('d5').innerHTML="Lenght of string is: "+s.length;
+    }
+    // Question 6
+    let car={
+        make: "Toyota",
+        model: "Abc",
+        year: 2020
+    };
+    console.log("Car make: ",car.make);
+    console.log("Car model: ",car.model);
+    // Quesstion 7
+    function checkEvenOdd() {
+    let num = parseInt(document.getElementById('num').value);
+    if (isNaN(num)) {
+        document.getElementById('d6').innerHTML = "Please enter a number.";
+    } else if (num % 2 === 0) {
+        document.getElementById('d6').innerHTML = "Even";
+    } else {
+        document.getElementById('d6').innerHTML = "Odd";
+    }
+    }
+    // Question 8
+    let ar=[1,2,3,4,5];
+    let squared = ar.map(n => n * n);
+    document.getElementById('d7').innerHTML="new array "+squared;
+    // Question 9
+    function parseValue() {
+  let input = document.getElementById('in').value;;
+  try {
+    let num = parseInt(input);
+    if (isNaN(num)) {
+      throw new Error("Cannot convert to number");
+    }
+        document.getElementById('d8').innerHTML = "Parsed Number: " + num;
+    } catch (error) {
+        document.getElementById('d8').innerHTML = "Error: " + error.message;
+    }
+    }
+    // Question 10
+     function changeText() {
+      document.getElementById('d9').textContent = "Hello, World!";
+    }
+    // Question 11
+    function changeBg()
+    {
+        document.body.style.background="grey";
+    }
+    //Question 12
+    let nums = [2, 6, 4, 9, 1, 8];
+    let filtered = nums.filter(n => n > 5);
+    document.getElementById('d10').innerHTML=filtered;
+</script>
+</html>
