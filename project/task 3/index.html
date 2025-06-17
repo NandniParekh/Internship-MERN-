@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>task 1</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="icon" href="fevi-icon.png">
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+<header id="dynamic">
+		<div class="co_subheader">
+			<div class="container">
+				<div class="row align-items-center">
+					<div class="col-lg-4">
+						<div class="lp d-flex align-items-center">
+							<span>follow on: </span>
+							<ul class="links">
+						    	<li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+		                        <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+		                        <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+						    </ul>
+						</div>
+					</div>
+					<div class="col">
+						<div class="logo">
+							<a href="index.html"><h1>food cafe</h1></a>
+						</div>
+					</div>
+					<div class="col">
+						<div class="rp">
+							<ul class="d-flex align-items-center">
+								<li>
+									<div class="language">
+										<i class="fa-solid fa-earth-americas"></i>
+										<select>
+											<option>English</option>
+											<option>Italian</option>
+											<option>France</option>
+											<option>Spanish</option>
+											<option>Poland</option>
+											<option>German</option>
+										</select>
+									</div>
+							    </li>
+							    <li><a class="login-btn" onclick="loginf()"> login</a></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="co_header">
+			<div class="container">
+				<div class="row align-items-center justify-content-center">
+					<div class="col-lg-12">
+						<div class="menu">
+							<ul>
+						<li onclick="f1(); f11();"><a href="#">home</a>
+							<ul class="dropdown dropdown-1">
+                                <li>
+                                    <a href="#">home1</a>
+                                    <a href="#">home2</a>
+                                    <a href="#">home3</a>
+                                </li>
+                            </ul>
+						</li>
+						<li onclick="f2(); f21()"><a href="#">about us</a>
+							<ul class="dropdown dropdown-2">
+                                <li>
+                                    <a href="#">who we are</a>
+                                    <a href="#">Team</a>
+                                    <a href="#">FAQ</a>
+                                </li>
+                            </ul>
+						</li>
+						<li onclick="f3(); f31()"><a href="#">services</a>
+							<ul class="dropdown dropdown-3">
+                                <li>
+                                    <a href="#">service1</a>
+                                    <a href="#">service2</a>
+                                    <a href="#">service3</a>
+                                </li>
+                            </ul>
+						</li>
+						<li onclick="f4(); f41()"><a href="#">gallery</a>
+							<ul class="dropdown dropdown-4">
+                                <li>
+                                    <a href="#">gallery1</a>
+                                    <a href="#">gallery2</a>
+                                    <a href="#">gallery3</a>
+                                </li>
+                            </ul>
+						</li>
+						<li onclick="f5(); f51()"><a href="#">contact us</a>
+                            <ul class="dropdown dropdown-5">
+                                <li>
+                                    <a href="#">contact1</a>
+                                    <a href="#">contact2</a>
+                                    <a href="#">contact3</a>
+                                </li>
+                            </ul>
+						</li>
+					</ul>
+						</div>
+					</div>
+				</div>
+
+			</div>
+		</div>
+    </header>
+	<div class="co_banner">
+    	<div class="container">
+	    	<div class="banner-slider">
+	    		<div class="image-continer">
+	    			<img src="banner-1.jpg" id="image1" class="active">
+	    			<img src="banner-2.jpg" id="image2">
+	    			<img src="banner-3.jpg" id="image3">
+	    		</div>
+	    		<button id="prev" onclick="prev1()"><i class="fa-solid fa-chevron-left"></i></button>
+	    		<button id="next" onclick="next1()"><i class="fa-solid fa-chevron-right"></i></button>
+	    	</div>
+	    </div>
+    </div>
+    <div class="co_tab">
+    	<div class="container">
+    		<div class="all-btn">
+    			<button onclick="home()">home</button>
+    			<button onclick="service()">service</button>
+    			<button onclick="contact()">contact</button>
+    		</div>
+    		<div class="image-continer1">
+    			<img src="tab-1.jpg" id="image4" class="active">
+    			<img src="tab-2.jpg" id="image5">
+    			<img src="tab-3.jpg" id="image6">
+    		</div>
+    	</div>
+    </div>
+    <div class="co_tab1">
+    	<div class="container">
+    		<div class="all-btn">
+    			<button onclick="coffee(event)">coffee</button>
+				<button onclick="drink(event)">colddrink</button>
+				<button onclick="fastfood(event)">fastfood</button>
+				<button onclick="tea(event)">Tea</button>
+				<button onclick="allItems(event)">all</button>
+    		</div>
+    		<div class="image-continer1">
+    			<div id="box1" class="tabing active">
+    				<div class="card1">
+    				    <img src="coffee-1.jpg">
+    				    <h4>Cappuccino</h4>
+    				</div>
+    				<div class="card1">
+    				    <img src="coffee-2.jpg">
+    				    <h4>Espresso</h4>
+    				</div>
+    				<div class="card1">
+    				    <img src="coffee-3.jpg">
+    				    <h4>Caffe Latte</h4>
+    				</div>
+    				<div class="card1">
+    				    <img src="coffee-4.jpg">
+    				    <h4>Cold brew</h4>
+    				</div>
+    			</div>
+    			<div id="box2" class="tabing">
+    				<div class="card1">
+    				    <img src="drink-1.jpg">
+    				    <h4>Sprite</h4>
+    				</div>
+    				<div class="card1">
+    				    <img src="drink-2.jpg">
+    				    <h4>Thums Up</h4>
+    				</div>
+    				<div class="card1">
+    				    <img src="drink-3.jpg">
+    				    <h4>Pepsi</h4>
+    				</div>
+    				<div class="card1">
+    				    <img src="drink-4.jpg">
+    				    <h4>Mirinda Orange</h4>
+    				</div>
+    			</div>
+    			<div id="box3" class="tabing">
+    				<div class="card1">
+    				    <img src="fast-1.avif">
+    				    <h4>KFC</h4>
+    				</div>
+    				<div class="card1">
+    				    <img src="fast-2.jpg">
+    				    <h4>Vadapav</h4>
+    				</div>
+    				<div class="card1">
+    				    <img src="fast-3.jpg">
+    				    <h4>Pizza</h4>
+    				</div>
+    				<div class="card1">
+    				    <img src="fast-4.jpg">
+    				    <h4>Taco</h4>
+    				</div>
+    			</div>
+    			<div id="box4" class="tabing">
+    				<div class="card1">
+    				    <img src="tea-1.jpg">
+    				    <h4>black tea</h4>
+    				</div>
+    				<div class="card1">
+    				    <img src="tea-2.jpg">
+    				    <h4>green tea</h4>
+    				</div>
+    				<div class="card1">
+    				    <img src="tea-3.webp">
+    				    <h4>herbal tea</h4>
+    				</div>
+    				<div class="card1">
+    				    <img src="tea-4.jpg">
+    				    <h4>oolong tea</h4>
+    				</div>
+    			</div>
+    			<div id="box5" class="tabing">
+    				<div class="card1">
+    				    <img src="coffee-1.jpg">
+    				    <h4>Cappuccino</h4>
+    				</div>
+    				<div class="card1">
+    				    <img src="coffee-2.jpg">
+    				    <h4>Espresso</h4>
+    				</div>
+    				<div class="card1">
+    				    <img src="coffee-3.jpg">
+    				    <h4>Caffe Latte</h4>
+    				</div>
+    				<div class="card1">
+    				    <img src="coffee-4.jpg">
+    				    <h4>Cold brew</h4>
+    				</div>
+    				<div class="card1">
+    				    <img src="drink-1.jpg">
+    				    <h4>Sprite</h4>
+    				</div>
+    				<div class="card1">
+    				    <img src="drink-2.jpg">
+    				    <h4>Thums Up</h4>
+    				</div>
+    				<div class="card1">
+    				    <img src="drink-3.jpg">
+    				    <h4>Pepsi</h4>
+    				</div>
+    				<div class="card1">
+    				    <img src="drink-4.jpg">
+    				    <h4>Mirinda Orange</h4>
+    				</div>
+    				<div class="card1">
+    				    <img src="fast-1.avif">
+    				    <h4>KFC</h4>
+    				</div>
+    				<div class="card1">
+    				    <img src="fast-2.jpg">
+    				    <h4>Vadapav</h4>
+    				</div>
+    				<div class="card1">
+    				    <img src="fast-3.jpg">
+    				    <h4>Pizza</h4>
+    				</div>
+    				<div class="card1">
+    				    <img src="fast-4.jpg">
+    				    <h4>Taco</h4>
+    				</div>
+    				<div class="card1">
+    				    <img src="tea-1.jpg">
+    				    <h4>black tea</h4>
+    				</div>
+    				<div class="card1">
+    				    <img src="tea-2.jpg">
+    				    <h4>green tea</h4>
+    				</div>
+    				<div class="card1">
+    				    <img src="tea-3.webp">
+    				    <h4>herbal tea</h4>
+    				</div>
+    				<div class="card1">
+    				    <img src="tea-4.jpg">
+    				    <h4>oolong tea</h4>
+    				</div>
+    			</div>
+    		</div>
+    	</div>
+    </div>
+    <div class="contact">
+    	<div class="container">
+    		<div class="row fix-contact">
+                <div class="col-lg-6 col-md-12 col-12 set-contact">
+                    <h2>Get in touch</h2>
+                    <form class="form1 row" onsubmit="return validateForm()">                       
+                        <div class="col-lg-6">
+                            <div class="part-1">
+                                <input type="text" placeholder="Name" name="name" id="name">
+                                <div id="error1"></div>
+                            </div>
+                        </div>
+                        <div class="col-lg-6">
+                            <div class="part-1">
+                                <input type="text" placeholder="Email" name="email" id="email">
+                                <div id="error2"></div>
+                            </div>
+                        </div>
+                        <div class="col-lg-12">
+                            <div class="part-1">
+                                <input type="Password" placeholder="Password" id="pwd">
+                                <div id="error3"></div>
+                            </div>
+                        </div>
+                        <div class="col-lg-12">
+                            <div class="part-1">
+                                <textarea placeholder="Your Message" name="description" id="description" rows="7" cols="30"></textarea>
+                                <div id="error4"></div>
+                            </div>
+                        </div>
+                        <div class="col-lg-12">
+                            <div class="sub1">
+                                <input type="submit" value="Submit">
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+                
+            </div>
+    	</div>
+    </div>
+    <div class="co_mouse">
+        <div class="container">
+            <div class="co_main">
+                <div class="button-main">
+                    <button onmouseover="story()">our story</button>
+                    <button onmouseover="mission()">mission</button>
+                    <button>vision</button>
+                </div>
+                <div class="about-main">
+                    <div class="about about1 active">
+                        Pure Chocolate. Pure Emotion. Quisque volutpat mattis eros. Nullam malesuada erat ut ki diaml ka dhuddu pochu turpis. Suspendisse urna nibh, viverra non, semper suscipit, posuere a, pede. Donec nec justo eget felisAdipiscing enim eu turpis egestas pretium aenean pharetra magna. Adipiscing elit pellentesque habitant morbi tristique senectus et netus.
+                    </div>
+                    <div class="about about2">
+                        Pure Chocolate. Pure Emotion. Quisque volutpat mattis eros. Nullam malesuada erat ut ki diaml ka dhuddu pochu turpis. Suspendisse urna nibh, viverra non, semper suscipit, posuere a, pede. 
+
+                    </div>
+                    <div class="about about3">
+                        Pure Chocolate. Pure Emotion. Quisque volutpat mattis eros. Nullam malesuada erat ut ki diaml ka dhuddu pochu turpis. Suspendisse urna nibh, viverra non, semper suscipit, posuere a, pede. Donec nec justo eget felisAdipiscing enim eu turpis egestas pretium aenean pharetra magna.
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+    	
+    </div>
+
+    <div class="login-modal">
+    	<div class="set-contact">
+            <h2>login</h2>
+            <div class="close-icon" onclick="hide()"><i class="fa-solid fa-xmark"></i></div>
+            <form class="form1 row"> 
+                <div class="col-lg-12">
+                    <div class="part-1">
+                        <input type="text" placeholder="Email" id="email1" onkeyup="first()">
+                    </div>
+                </div>
+                <div class="col-lg-12">
+                    <div class="part-1">
+                        <input type="Password" placeholder="Password" id="pwd1" onkeyup="last()">
+                    </div>
+                </div>
+                <div class="col-lg-12">
+                    <error id="login-error"></error>
+                    
+                </div>
+                <div class="col-lg-12">
+                    <div class="sub1">
+                        <input type="submit" value="Submit" onclick="return validate()">
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+    <script type="text/javascript" src="main.js"></script>
+</body>
+</html>
